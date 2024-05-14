@@ -15,8 +15,7 @@ namespace CliNet.Services
                          "Legenda: " +
                          "tech = tecnologia do comando (exemplo de tecnologia: git)" +
                          "commands = lista de comandos (exemplo: git clone [source])";
-            //const string prompt = $@"(modelo do JSON: [tech: string, commands: string[]]) " +
-            //                      "Digite um comando de terminal para receber uma lista de objetos JSON contendo tecnologia e comandos associados com o termo informado:\r\n: {value}";
+
             var apiKey = CredentialManager.GetCredential();
             if (string.IsNullOrEmpty(apiKey))
             {
@@ -63,7 +62,7 @@ namespace CliNet.Services
                 var jsonResult = result?.Choices[0].Message.TextContent;
                 if (jsonResult == null) return [];
                 var contentResponse = JsonConvert.DeserializeObject<ContentResponse>(jsonResult, new JsonSerializerSettings { Formatting = Formatting.None }) ?? new ContentResponse();
-                return contentResponse.content;
+                return contentResponse.Content;
 
             }
             catch (Exception e)

@@ -1,19 +1,9 @@
-﻿using Newtonsoft.Json;
-
-namespace CliNet.Models
+﻿namespace CliNet.Models
 {
-
-    public class ContentResponse
-    {
-        public List<TerminalCommand> content { get; set; } = [];
-    }
-
     public class TerminalCommand
     {
-        [JsonProperty("tech")]
-        public string? tech { get; set; }
+        public string? Tech { get; set; }
 
-        [JsonProperty("commands")]
-        public List<string> commands { get; set; } = [];
+        public List<string> Commands { get; set; } = [];
     }
 }

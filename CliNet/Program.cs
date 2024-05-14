@@ -43,11 +43,11 @@ namespace CliNet
             {
                 Console.WriteLine("");
                 Console.ForegroundColor = ConsoleColor.DarkGreen;
-                Console.WriteLine($"Tecnologia: {techCommand.tech}");
+                Console.WriteLine($"Tecnologia: {techCommand.Tech}");
                 Console.WriteLine("-----------------------------------------------");
                 Console.ResetColor();
                 Console.ForegroundColor = ConsoleColor.Yellow;
-                foreach (var command in techCommand.commands)
+                foreach (var command in techCommand.Commands)
                 {
                     Console.WriteLine($"Comando: {command}");
                 }
