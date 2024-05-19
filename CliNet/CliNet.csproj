@@ -1,14 +1,24 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
-  <PropertyGroup>
-    <OutputType>Exe</OutputType>
-    <TargetFramework>net8.0</TargetFramework>
-    <ImplicitUsings>enable</ImplicitUsings>
-    <Nullable>enable</Nullable>
-  </PropertyGroup>
+	<PropertyGroup>
+		<OutputType>Exe</OutputType>
+		<TargetFramework>net8.0</TargetFramework>
+		<ImplicitUsings>enable</ImplicitUsings>
+		<Nullable>enable</Nullable>
 
-  <ItemGroup>
-    <PackageReference Include="OpenAI" Version="1.11.0" />
-  </ItemGroup>
+		<AssemblyName>CliNet</AssemblyName>
+		<PackAsTool>True</PackAsTool>
+		<Title>CliNet</Title>
+		<Version>1.0.1</Version>
+		<Authors>Fábio Salomão</Authors>
+		<PackageId>com.clinet</PackageId>
+		<PackageDescription>CLI de dicas de comandos de terminal</PackageDescription>
+		<PackageTags>CLI, OpenAI, Terminal</PackageTags>
+		<PackageOutputPath>./nupkg</PackageOutputPath>
+		<RepositoryUrl>https://github.com/fabiosalomaosilva/CliNet</RepositoryUrl>
+	</PropertyGroup>
 
+	<ItemGroup>
+		<PackageReference Include="OpenAI" Version="1.11.0" />
+	</ItemGroup>
 </Project>
