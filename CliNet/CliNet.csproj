@@ -14,7 +14,6 @@
 		<PackageId>com.clinet</PackageId>
 		<PackageDescription>CLI de dicas de comandos de terminal</PackageDescription>
 		<PackageTags>CLI, OpenAI, Terminal</PackageTags>
-		<PackageOutputPath>./nupkg</PackageOutputPath>
 		<RepositoryUrl>https://github.com/fabiosalomaosilva/CliNet</RepositoryUrl>
 	</PropertyGroup>
 
