@@ -3,7 +3,7 @@ namespace CliNet.Test
     public class GptServiceTests
     {
         [Fact]
-        public async Task CallApiGpt_ShouldReturnListOfTerminalCommands()
+        public void CallApiGpt_ShouldReturnListOfTerminalCommands()
         {
             var result = true;
 
