@@ -39,5 +39,22 @@ jobs:
     if: github.event_name == 'push' && contains(github.ref, 'refs/heads/master')
 
     steps:
+    - name: Check out the code
+      uses: actions/checkout@v2
+
+    - name: Setup .NET
+      uses: actions/setup-dotnet@v2
+      with:
+        dotnet-version: '8.0.x'
+
+    - name: Install dependencies
+      run: dotnet restore
+
+    - name: Build
+      run: dotnet build --configuration Release --no-restore
+
+    - name: Pack
+      run: dotnet pack --configuration Release --no-build
+      
     - name: Publish to GitHub Packages
       run: dotnet nuget push CliNet/bin/Release/*.nupkg --source "https://nuget.pkg.github.com/fabiosalomaosilva/index.json" --api-key ${{ secrets.TOKEN_CI }}
