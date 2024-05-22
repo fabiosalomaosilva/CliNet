@@ -5,7 +5,7 @@ namespace CliNet.Test
         [Fact]
         public void CallApiGpt_ShouldReturnListOfTerminalCommands()
         {
-            var result = true;
+            const bool result = true;
 
             Assert.True(result);
         }

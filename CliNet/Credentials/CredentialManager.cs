@@ -59,7 +59,7 @@ namespace CliNet.Credentials
             throw new System.ComponentModel.Win32Exception(lastError);
         }
 
-        public static string GetCredential()
+        public static string? GetCredential()
         {
             if (!CredRead("OpenAiToken", CredTypeGeneric, 0, out var credentialPtr)) return null;
             try
