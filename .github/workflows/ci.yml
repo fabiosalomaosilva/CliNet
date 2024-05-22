@@ -40,6 +40,6 @@ jobs:
 
     steps:
     - name: Publish to GitHub Packages
-      run: dotnet nuget push CliNet/nupkg/*.nupkg --source "https://nuget.pkg.github.com/fabiosalomaosilva/index.json" --api-key ${{ secrets.GITHUB_TOKEN }}
+      run: dotnet nuget push **/nupkg/*.nupkg --source "https://nuget.pkg.github.com/fabiosalomaosilva/index.json" --api-key ${{ secrets.GITHUB_TOKEN }}
       env:
         GITHUB_TOKEN: ${{ secrets.TOKEN_CI }}
