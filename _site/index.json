@@ -56,13 +56,13 @@
   },
   "docs/getting-started.html": {
     "href": "docs/getting-started.html",
-    "title": "Getting Started | CliNet",
-    "keywords": "Getting Started"
+    "title": "Começando | CliNet",
+    "keywords": "Começando Para utilizar a CLI, abra uma nova instância do Windows Terminal ou do terminal de sua escolha e execute o comando desejado. Como exemplo, podemos usar o código a seguir: $ clinet pull build E o resultado deverá ser parecido com a imagem a seguir: Você poderá ainda definir a tecnologia (nuget ou npm)que usará com o comando de terminal que está pesquisando, bastando informar também como um argumento: $ clinet nuget install ou $ clinet nextjs create Você pode adicionar quantos termos desejar na linha de comando para refinar sua busca, como a seguir: $ clinet npm run docker build restore ou $ clinet nextjs create install run build"
   },
   "docs/introduction.html": {
     "href": "docs/introduction.html",
-    "title": "Introduction | CliNet",
-    "keywords": "Introduction"
+    "title": "Sobre o projeto | CliNet",
+    "keywords": "Sobre o projeto Projeto de exemplo para criação de ferramenta de linha de comando CLI com integração com o ChatGPT. Se você já se perguntou como são desenvolvidas aquelas ferramentas de linha de comando que facilitam operações no terminal, como as amplamente utilizadas no ecossistema Node.js para instalação de pacotes NPM e inicialização de serviços, você ficará feliz em saber que com o .NET é possível criar aplicações de console com essa finalidade de maneira simples e eficiente. Ao usar a CLI, digitando o comando clinet (que é o nome do projeto e por consequência, do executável gerado) seguido dos termos de pesquisa, o sistema fornecerá sugestões de comandos pertinentes às tecnologias especificadas. Assim, elimina-se a necessidade de consultar documentações para recordar comandos essenciais do terminal."
   },
   "index.html": {
     "href": "index.html",
