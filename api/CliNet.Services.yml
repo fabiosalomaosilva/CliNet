@@ -1,0 +1,23 @@
+### YamlMime:ManagedReference
+items:
+- uid: CliNet.Services
+  commentId: N:CliNet.Services
+  id: CliNet.Services
+  children:
+  - CliNet.Services.GptService
+  langs:
+  - csharp
+  - vb
+  name: CliNet.Services
+  nameWithType: CliNet.Services
+  fullName: CliNet.Services
+  type: Namespace
+  assemblies:
+  - CliNet
+references:
+- uid: CliNet.Services.GptService
+  commentId: T:CliNet.Services.GptService
+  href: CliNet.Services.GptService.html
+  name: GptService
+  nameWithType: GptService
+  fullName: CliNet.Services.GptService

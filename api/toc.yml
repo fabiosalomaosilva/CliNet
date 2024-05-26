@@ -1,0 +1,27 @@
+### YamlMime:TableOfContent
+items:
+- uid: CliNet.Credentials
+  name: CliNet.Credentials
+  items:
+  - uid: CliNet.Credentials.CredentialManager
+    name: CredentialManager
+  - uid: CliNet.Credentials.CredentialManager.NativeCredential
+    name: CredentialManager.NativeCredential
+- uid: CliNet.Models
+  name: CliNet.Models
+  items:
+  - uid: CliNet.Models.ContentResponse
+    name: ContentResponse
+  - uid: CliNet.Models.TerminalCommand
+    name: TerminalCommand
+- uid: CliNet.Services
+  name: CliNet.Services
+  items:
+  - uid: CliNet.Services.GptService
+    name: GptService
+- uid: CliNet.Test
+  name: CliNet.Test
+  items:
+  - uid: CliNet.Test.GptServiceTests
+    name: GptServiceTests
+memberLayout: SamePage

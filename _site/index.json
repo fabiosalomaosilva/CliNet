@@ -1,0 +1,72 @@
+{
+  "README.html": {
+    "href": "README.html",
+    "title": "| CliNet",
+    "keywords": "Sobre o Projeto Projeto de exemplo para criação de ferramenta de linha de comando CLI com integração com o ChatGPT. Se você já se perguntou como são desenvolvidas aquelas ferramentas de linha de comando que facilitam operações no terminal, como as amplamente utilizadas no ecossistema Node.js para instalação de pacotes NPM e inicialização de serviços, você ficará feliz em saber que com o .NET é possível criar aplicações de console com essa finalidade de maneira simples e eficiente. Ao usar a CLI, digitando o comando clinet (que é o nome do projeto e por consequência, do executável gerado) seguido dos termos de pesquisa, o sistema fornecerá sugestões de comandos pertinentes às tecnologias especificadas. Assim, elimina-se a necessidade de consultar documentações para recordar comandos essenciais do terminal."
+  },
+  "api/CliNet.Credentials.CredentialManager.NativeCredential.html": {
+    "href": "api/CliNet.Credentials.CredentialManager.NativeCredential.html",
+    "title": "Struct CredentialManager.NativeCredential | CliNet",
+    "keywords": "Struct CredentialManager.NativeCredential Namespace CliNet.Credentials Assembly CliNet.dll public struct CredentialManager.NativeCredential Inherited Members ValueType.Equals(object) ValueType.GetHashCode() ValueType.ToString() object.Equals(object, object) object.GetType() object.ReferenceEquals(object, object) Fields AttributeCount public uint AttributeCount Field Value uint Attributes public nint Attributes Field Value nint Comment public nint Comment Field Value nint CredentialBlob public nint CredentialBlob Field Value nint CredentialBlobSize public uint CredentialBlobSize Field Value uint Flags public uint Flags Field Value uint LastWritten public FILETIME LastWritten Field Value FILETIME Persist public uint Persist Field Value uint TargetAlias public nint TargetAlias Field Value nint TargetName public nint TargetName Field Value nint Type public int Type Field Value int UserName public nint UserName Field Value nint"
+  },
+  "api/CliNet.Credentials.CredentialManager.html": {
+    "href": "api/CliNet.Credentials.CredentialManager.html",
+    "title": "Class CredentialManager | CliNet",
+    "keywords": "Class CredentialManager Namespace CliNet.Credentials Assembly CliNet.dll public static class CredentialManager Inheritance object CredentialManager Inherited Members object.Equals(object) object.Equals(object, object) object.GetHashCode() object.GetType() object.MemberwiseClone() object.ReferenceEquals(object, object) object.ToString() Methods CredDelete(string, int, int) public static extern bool CredDelete(string target, int type, int reservedFlag) Parameters target string type int reservedFlag int Returns bool CredFree(nint) public static extern bool CredFree(nint cred) Parameters cred nint Returns bool CredRead(string, int, int, out nint) public static extern bool CredRead(string target, int type, int reservedFlag, out nint credentialPtr) Parameters target string type int reservedFlag int credentialPtr nint Returns bool CredWrite(ref NativeCredential, uint) public static extern bool CredWrite(ref CredentialManager.NativeCredential userCredential, uint flags) Parameters userCredential CredentialManager.NativeCredential flags uint Returns bool DeleteCredential() public static bool DeleteCredential() Returns bool GetCredential() public static string? GetCredential() Returns string SaveCredential(string) public static void SaveCredential(string value) Parameters value string"
+  },
+  "api/CliNet.Credentials.html": {
+    "href": "api/CliNet.Credentials.html",
+    "title": "Namespace CliNet.Credentials | CliNet",
+    "keywords": "Namespace CliNet.Credentials Classes CredentialManager Structs CredentialManager.NativeCredential"
+  },
+  "api/CliNet.Models.ContentResponse.html": {
+    "href": "api/CliNet.Models.ContentResponse.html",
+    "title": "Class ContentResponse | CliNet",
+    "keywords": "Class ContentResponse Namespace CliNet.Models Assembly CliNet.dll public class ContentResponse Inheritance object ContentResponse Inherited Members object.Equals(object) object.Equals(object, object) object.GetHashCode() object.GetType() object.MemberwiseClone() object.ReferenceEquals(object, object) object.ToString() Properties Content public List<TerminalCommand> Content { get; set; } Property Value List<TerminalCommand>"
+  },
+  "api/CliNet.Models.TerminalCommand.html": {
+    "href": "api/CliNet.Models.TerminalCommand.html",
+    "title": "Class TerminalCommand | CliNet",
+    "keywords": "Class TerminalCommand Namespace CliNet.Models Assembly CliNet.dll public class TerminalCommand Inheritance object TerminalCommand Inherited Members object.Equals(object) object.Equals(object, object) object.GetHashCode() object.GetType() object.MemberwiseClone() object.ReferenceEquals(object, object) object.ToString() Properties Commands public List<string> Commands { get; set; } Property Value List<string> Tech public string? Tech { get; set; } Property Value string"
+  },
+  "api/CliNet.Models.html": {
+    "href": "api/CliNet.Models.html",
+    "title": "Namespace CliNet.Models | CliNet",
+    "keywords": "Namespace CliNet.Models Classes ContentResponse TerminalCommand"
+  },
+  "api/CliNet.Services.GptService.html": {
+    "href": "api/CliNet.Services.GptService.html",
+    "title": "Class GptService | CliNet",
+    "keywords": "Class GptService Namespace CliNet.Services Assembly CliNet.dll public static class GptService Inheritance object GptService Inherited Members object.Equals(object) object.Equals(object, object) object.GetHashCode() object.GetType() object.MemberwiseClone() object.ReferenceEquals(object, object) object.ToString() Methods CallApiGpt(string) public static Task<List<TerminalCommand>> CallApiGpt(string value) Parameters value string Returns Task<List<TerminalCommand>>"
+  },
+  "api/CliNet.Services.html": {
+    "href": "api/CliNet.Services.html",
+    "title": "Namespace CliNet.Services | CliNet",
+    "keywords": "Namespace CliNet.Services Classes GptService"
+  },
+  "api/CliNet.Test.GptServiceTests.html": {
+    "href": "api/CliNet.Test.GptServiceTests.html",
+    "title": "Class GptServiceTests | CliNet",
+    "keywords": "Class GptServiceTests Namespace CliNet.Test Assembly CliNet.Test.dll public class GptServiceTests Inheritance object GptServiceTests Inherited Members object.Equals(object) object.Equals(object, object) object.GetHashCode() object.GetType() object.MemberwiseClone() object.ReferenceEquals(object, object) object.ToString() Methods CallApiGpt_ShouldReturnListOfTerminalCommands() [Fact] public void CallApiGpt_ShouldReturnListOfTerminalCommands()"
+  },
+  "api/CliNet.Test.html": {
+    "href": "api/CliNet.Test.html",
+    "title": "Namespace CliNet.Test | CliNet",
+    "keywords": "Namespace CliNet.Test Classes GptServiceTests"
+  },
+  "docs/getting-started.html": {
+    "href": "docs/getting-started.html",
+    "title": "Getting Started | CliNet",
+    "keywords": "Getting Started"
+  },
+  "docs/introduction.html": {
+    "href": "docs/introduction.html",
+    "title": "Introduction | CliNet",
+    "keywords": "Introduction"
+  },
+  "index.html": {
+    "href": "index.html",
+    "title": "This is the HOMEPAGE. | CliNet",
+    "keywords": "This is the HOMEPAGE. Refer to Markdown for how to write markdown files. Quick Start Notes: Add images to the images folder if the file is referencing an image."
+  }
+}

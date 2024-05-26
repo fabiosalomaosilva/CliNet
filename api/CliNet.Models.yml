@@ -1,0 +1,30 @@
+### YamlMime:ManagedReference
+items:
+- uid: CliNet.Models
+  commentId: N:CliNet.Models
+  id: CliNet.Models
+  children:
+  - CliNet.Models.ContentResponse
+  - CliNet.Models.TerminalCommand
+  langs:
+  - csharp
+  - vb
+  name: CliNet.Models
+  nameWithType: CliNet.Models
+  fullName: CliNet.Models
+  type: Namespace
+  assemblies:
+  - CliNet
+references:
+- uid: CliNet.Models.ContentResponse
+  commentId: T:CliNet.Models.ContentResponse
+  href: CliNet.Models.ContentResponse.html
+  name: ContentResponse
+  nameWithType: ContentResponse
+  fullName: CliNet.Models.ContentResponse
+- uid: CliNet.Models.TerminalCommand
+  commentId: T:CliNet.Models.TerminalCommand
+  href: CliNet.Models.TerminalCommand.html
+  name: TerminalCommand
+  nameWithType: TerminalCommand
+  fullName: CliNet.Models.TerminalCommand
