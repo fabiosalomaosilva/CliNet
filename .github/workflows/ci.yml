@@ -7,6 +7,15 @@ on:
   pull_request:
     branches:
       - master
+      
+permissions:
+  actions: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: "pages"
+  cancel-in-progress: false  
 
 jobs:
   build:
@@ -36,10 +45,50 @@ jobs:
   publish:
     needs: build
     runs-on: ubuntu-latest
-    if: github.event_name == 'push' && github.ref == 'refs/heads/master'
+    if: github.event_name == 'push' && contains(github.ref, 'refs/heads/master')
 
     steps:
+    - name: Check out the code
+      uses: actions/checkout@v2
+
+    - name: Setup .NET
+      uses: actions/setup-dotnet@v2
+      with:
+        dotnet-version: '8.0.x'
+
+    - name: Install dependencies
+      run: dotnet restore
+
+    - name: Build
+      run: dotnet build --configuration Release --no-restore
+
+    - name: Pack
+      run: dotnet pack --configuration Release --no-build
+      
     - name: Publish to GitHub Packages
-      run: dotnet nuget push bin/Release/*.nupkg/*.nupkg --source "https://nuget.pkg.github.com/fabiosalomaosilva/index.json" --api-key ${{ secrets.GITHUB_TOKEN }}
-      env:
-        GITHUB_TOKEN: ${{ secrets.TOKEN_CI }}
+      run: dotnet nuget push CliNet/bin/Release/*.nupkg --source "https://nuget.pkg.github.com/fabiosalomaosilva/index.json" --api-key ${{ secrets.TOKEN_CI }}
+  
+  publish-docs:
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    runs-on: ubuntu-latest
+    steps:
+    - name: Checkout
+      uses: actions/checkout@v3
+    - name: Dotnet Setup
+      uses: actions/setup-dotnet@v3
+      with:
+        dotnet-version: '8.0.x'
+
+    - run: dotnet tool update -g docfx
+    - run: docfx docfx.json
+
+    - name: Upload artifact
+      uses: actions/upload-pages-artifact@v3
+      with:
+        # Upload entire repository
+        path: '_site'
+    - name: Deploy to GitHub Pages
+      id: deployment
+      uses: actions/deploy-pages@v4    
