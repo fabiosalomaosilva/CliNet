@@ -9,7 +9,7 @@
 		<AssemblyName>CliNet</AssemblyName>
 		<PackAsTool>True</PackAsTool>
 		<Title>CliNet</Title>
-		<Version>1.1.1</Version>
+		<Version>1.1.2</Version>
 		<Authors>Fábio Salomão</Authors>
 		<PackageId>com.clinet</PackageId>
 		<PackageDescription>CLI de dicas de comandos de terminal</PackageDescription>
